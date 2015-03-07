@@ -9,7 +9,7 @@ base_services.each do |s|
   end
 end
 
-base_packages = ['vim', 'git', 'curl', 'php5-cli', 'php5-dev', 'php-pear']
+base_packages = ['vim', 'git', 'curl']
 
 base_packages.each do |p|
   describe package(p) do
@@ -17,7 +17,7 @@ base_packages.each do |p|
   end
 end
 
-php_mods = ['gd', 'sqlite', 'mysql', 'curl', 'mcrypt', 'json' ]
+php_mods = ['gd', 'mysql', 'curl', 'mcrypt']
 
 php_mods.each do |mod|
   describe command("php -m | grep #{mod}") do
